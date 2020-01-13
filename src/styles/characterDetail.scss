@@ -1,14 +1,53 @@
 .details {
-
-  width: 600px;
+  width: 500px;
   height: 300px;
   background:  #98C849;
+  display: flex;
+  border-radius: 20px;
 
-  &__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
+  
+  &__info {
+    padding: 15px;
+    list-style: none;
+    font-family: 'Neucha', cursive;
+    font-size:20px ;
+
+    &--name {
+      text-transform: uppercase;
+      font-size: 33px;
+      font-family: 'Cute Font', cursive;
+      line-height: 22px;
+      margin-bottom: 30px;
+      
+    }
   }
 
+  &__img{
+    height: 300px;
+    border-radius: 20px 0 0 20px ;
+  }
+
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+
+  &--exit {
+    color: #36B0C7;
+    border: black solid;
+    background: black;
+    border-radius: 50%;
+    font-size: 20px;
+  }
+}
+
+.btn{
+  display: flex;
+  justify-content: flex-end;
+  width: 190px ;
+  margin-top: 10px;
 }

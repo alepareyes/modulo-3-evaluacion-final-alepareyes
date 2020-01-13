@@ -1,8 +1,19 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
   background-color: black;
+}
+
+a{
+  &:link,
+  &:visited,
+  &:active,
+  &:hover{
+      text-decoration: none;
+      color: black;
+  }
 }

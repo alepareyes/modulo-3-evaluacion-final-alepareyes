@@ -3,6 +3,7 @@
   justify-content: center;
   
   &__logo {
+    margin-top: 20px;
     width: 400px;
     margin-bottom: 30px;
   } 
@@ -12,9 +13,6 @@
     padding: 3px;
     border-radius: 20px ;
     border: #36B0C7 solid;
-
-    &--container{
-      
-    }
+    margin: 10px;
   } 
 }

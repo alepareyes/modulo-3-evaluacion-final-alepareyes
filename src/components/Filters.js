@@ -1,12 +1,21 @@
 import React from 'react';
 import '../styles/filters.scss';
 
-const Filters = () => {
+const Filters = (props) => {
+
+  const handleSearch = (ev) => {
+    props.handleSearch({
+      value: ev.target.value
+    });
+  }
+
   return (
-    <div className="fitler__input--container">
+    <div className="container">
       <input
         type="text"
-        className="filter__input" />
+        className="filter__input"
+        placeholder="Search Character"
+        onChange={handleSearch} />
     </div>
   );
 }

@@ -9,6 +9,7 @@ const CharacterList = (props) => {
       {props.characters.map((character) => {
         return (
           <CharacterCard
+            key={character.id}
             characters={character} />
         )
       })}

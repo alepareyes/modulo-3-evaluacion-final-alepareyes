@@ -1,0 +1,20 @@
+.filter {
+  display: flex;
+  justify-content: center;
+  
+  &__logo {
+    width: 400px;
+    margin-bottom: 30px;
+  } 
+
+  &__input {
+    background: #98C849;
+    padding: 3px;
+    border-radius: 20px ;
+    border: #36B0C7 solid;
+
+    &--container{
+      
+    }
+  } 
+}

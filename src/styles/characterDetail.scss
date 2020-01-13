@@ -1,0 +1,14 @@
+.details {
+
+  width: 600px;
+  height: 300px;
+  background:  #98C849;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+}

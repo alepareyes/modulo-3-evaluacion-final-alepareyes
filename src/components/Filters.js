@@ -1,11 +1,14 @@
 import React from 'react';
 import '../styles/filters.scss';
-import ''
 
 const Filters = () => {
-  return
-  <header className="filter">
-    <img src={logo}
-
-  </header>
+  return (
+    <div className="fitler__input--container">
+      <input
+        type="text"
+        className="filter__input" />
+    </div>
+  );
 }
+
+export default Filters;

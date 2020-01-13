@@ -4,6 +4,7 @@
   background:  #98C849;
   display: flex;
   border-radius: 20px;
+  margin-top: 70px;
 
   
   &__info {
@@ -11,6 +12,8 @@
     list-style: none;
     font-family: 'Neucha', cursive;
     font-size:20px ;
+    line-height: 25px;
+    
 
     &--name {
       text-transform: uppercase;
@@ -32,10 +35,10 @@
 .container{
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .icon {
-
   &--exit {
     color: #36B0C7;
     border: black solid;

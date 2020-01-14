@@ -1,9 +1,9 @@
 import React from 'react';
+import '../styles/app.scss';
+import Header from './Header';
 import Filters from './Filters';
 import CharacterList from './CharacterList';
 import CharacterDetail from './CharacterDetail';
-import Header from './Header';
-import '../styles/app.scss';
 import apiCharacters from '../api/fetch';
 import { Switch, Route } from 'react-router-dom';
 
@@ -51,7 +51,7 @@ class App extends React.Component {
 
     if (character === undefined) {
       console.log(props)
-      return <p className="notfound">Character not found</p>
+      return <p className="notfound">Character not found!! Sorry :( </p>
     } else {
       return <CharacterDetail
         character={character}

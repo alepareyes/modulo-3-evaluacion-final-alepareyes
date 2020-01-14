@@ -21,6 +21,7 @@ const Filters = (props) => {
         placeholder="Search Character"
         onChange={handleSearch}
         value={props.value} />
+      <input type="radio" name="Alien?"></input>
     </div>
   );
 }

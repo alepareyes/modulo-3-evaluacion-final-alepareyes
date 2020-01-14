@@ -3,17 +3,17 @@
 
 
 **Web desarrollada con React, listado de personajes de Rick y Morty que se puede filtrar por nombre del personaje.**
-![Listado](_public/list.png)
+![Listado](public/list.png)
 Nos traemos la info de 20 personajes, y pintamos al menos la **foto**, el **nombre** y la **especie**. 
 
 
 **Añadimos un input a la interfaz, de forma que al ir escribiendo un nombre queden en la interfaz aquellos con los que coincide la búsqueda.**
-![Búsqueda](_public/search.png)
+![Búsqueda](public/search.png)
 
 
 
 #### Componentes del listado de personajes
-![Estructura](_public/structure.png)
+![Estructura](public/structure.png)
 
 Esto son los componentes creados para este proyecto, mas uno adicional,  **Header**.
 

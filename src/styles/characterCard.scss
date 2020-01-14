@@ -6,16 +6,17 @@
   text-align: center;
   flex-wrap: wrap;
 
-
   color: black;
   background-color: #98C849;
 
   width: 180px;
   height: 240px;
-  
   margin: 10px;
-
   border-radius: 10px;
+
+  &:hover{
+    box-shadow: 0px 0px 50px -18px #36B0C7;
+  }
   
   &__img{
     margin-top: 0;
@@ -27,11 +28,15 @@
 
   &__name {
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 25px;
     font-weight: bold;
+    font-family: 'Cute Font', cursive;
+    line-height: 15px;
   }
-  &__specie {
-    font-size: 13px;
 
+
+  &__specie {
+    font-size: 15px;
+    font-family: 'Neucha', cursive;
   }
 }

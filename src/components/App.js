@@ -15,7 +15,6 @@ class App extends React.Component {
       search: "",
       characters: []
     };
-
     this.handleSearch = this.handleSearch.bind(this);
     this.renderCharacterDetails = this.renderCharacterDetails.bind(this);
   }
@@ -23,6 +22,7 @@ class App extends React.Component {
   componentDidMount() {
     apiCharacters().then(characters => this.setState({ characters }));
   }
+
 
   // EVENTOS
 
@@ -52,7 +52,8 @@ class App extends React.Component {
       return <p>Character not found</p>
     } else {
       return <CharacterDetail
-        character={character} />
+        character={character}
+      />
     }
 
   }

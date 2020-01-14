@@ -3,9 +3,33 @@ import '../styles/characterDetail.scss';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+import { GiAlienSkull, GiPerson } from "react-icons/gi";
+import { FaBookDead, FaHeartbeat } from 'react-icons/fa';
 
 
 const CharacterDetail = (props) => {
+
+  function whichSpecie(specie) {
+    if (specie === "Alien") {
+      return <GiAlienSkull />
+    } else {
+      return <GiPerson />
+    }
+  }
+
+
+  function whichStatus(status) {
+    if (status === "Alive") {
+      return <FaHeartbeat />
+    } else if (status === "unknown") {
+      return
+    } else {
+      return <FaBookDead />
+    }
+  }
+
+
+
 
   return (
     <div className="container">
@@ -35,6 +59,7 @@ const CharacterDetail = (props) => {
               <strong>Episodes:</strong> {props.character.episode.length}
             </li>
           </ul>
+          <div className="icons">{whichSpecie(props.character.species)} {whichStatus(props.character.status)}</div>
         </div>
       </div>
     </div>

@@ -20,7 +20,8 @@
       font-size: 33px;
       font-family: 'Cute Font', cursive;
       line-height: 22px;
-      margin-bottom: 30px;
+      margin-top: 10px;
+      margin-bottom: 15px;
       
     }
   }
@@ -40,11 +41,17 @@
 
 .icon {
   &--exit {
+    position: absolute;
     color: #36B0C7;
     border: black solid;
     background: black;
     border-radius: 50%;
     font-size: 20px;
+
+    &:hover {
+      font-size: 22px;
+      transition: ease 1.5s;
+    }
   }
 }
 
@@ -53,4 +60,10 @@
   justify-content: flex-end;
   width: 190px ;
   margin-top: 10px;
+}
+
+.icons{
+  display: flex;
+  justify-content: center;
+  font-size: 26px;
 }

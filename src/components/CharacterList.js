@@ -1,11 +1,16 @@
 import React from 'react';
 import CharacterCard from './CharacterCard';
-import '../styles/characterList.scss'
+import '../styles/characterList.scss';
+import PropTypes from 'prop-types';
+
 
 const CharacterList = (props) => {
-  console.log(props.characters)
+
+  const notFound = props.characters.length === 0 ? <p className="notfound">Character not found :( sorry!!</p> : ""
+
   return (
     <div className="list">
+      {notFound}
       {props.characters.map((character) => {
         return (
           <CharacterCard
@@ -17,5 +22,10 @@ const CharacterList = (props) => {
     </div>
   )
 }
+
+CharacterList.propTypes = {
+  filteredCharacters: PropTypes.func
+}
+
 
 export default CharacterList;

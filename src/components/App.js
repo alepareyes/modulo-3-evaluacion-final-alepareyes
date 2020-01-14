@@ -50,7 +50,6 @@ class App extends React.Component {
     const character = this.state.characters.find(item => item.id == routeId);
 
     if (character === undefined) {
-      console.log(props)
       return <p className="notfound">Character not found!! Sorry :( </p>
     } else {
       return <CharacterDetail

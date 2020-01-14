@@ -32,6 +32,8 @@ class App extends React.Component {
     })
   }
 
+  stop
+
   // HELPERS
 
   filteredCharacters() {
@@ -49,7 +51,7 @@ class App extends React.Component {
 
     if (character === undefined) {
       console.log(props)
-      return <p>Character not found</p>
+      return <p className="notfound">Character not found</p>
     } else {
       return <CharacterDetail
         character={character}
@@ -67,7 +69,7 @@ class App extends React.Component {
         <Header />
         <Switch>
           <Route exact path="/" >
-            <Filters handleSearch={this.handleSearch} />
+            <Filters handleSearch={this.handleSearch} value={this.state.search} />
             <CharacterList characters={this.filteredCharacters()} />
           </Route>
           <Route exact path="/character/:id">

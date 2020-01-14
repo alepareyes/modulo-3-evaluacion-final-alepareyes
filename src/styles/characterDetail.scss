@@ -22,7 +22,6 @@
       line-height: 22px;
       margin-top: 10px;
       margin-bottom: 15px;
-      
     }
   }
 
@@ -53,6 +52,38 @@
       transition: ease 1.5s;
     }
   }
+    &--heart{
+      color: rgb(255, 0, 191);
+      background: black;
+      border-radius: 20%;
+      border-radius: 0 20% 20% 0;
+      padding-right: 3px;
+      border: black solid;
+    }
+
+    &--human{
+      border: black solid;
+      color: rgb(251, 217, 26);
+      background: black;
+      border-radius: 20% 0 0 20%;
+    }
+
+    &--alien{
+      border: black solid;
+      color: rgb(0, 255, 13);
+      background: black;
+      border-radius: 20% 0 0 20%;
+    }
+
+    &--dead {
+      border: black solid;
+      color: rgb(132, 0, 255);
+      background: black;
+      border: black solid;
+      border-radius: 20%;
+      border-radius: 0 20% 20% 0;
+      padding-right: 3px;
+    }
 }
 
 .btn{

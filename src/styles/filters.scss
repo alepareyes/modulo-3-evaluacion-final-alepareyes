@@ -16,6 +16,17 @@
     margin: 10px;
     box-shadow: 0px 0px 50px -18px #36B0C7;
     margin-bottom: 20px;
-
+    font-size: 15px;
   } 
+
+  &__label {
+    color: #98C849;
+  }
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Neucha', cursive;
+
 }

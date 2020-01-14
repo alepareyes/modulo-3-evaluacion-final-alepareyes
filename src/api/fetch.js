@@ -1,6 +1,6 @@
 
 export default () => {
-  return fetch('https://raw.githubusercontent.com/Adalab/rick-y-morty/master/data/rick-y-morty.json')
+  return fetch('https://rickandmortyapi.com/api/character/?page=10')
     .then(response => response.json())
     .then(characters => characters.results)
 }

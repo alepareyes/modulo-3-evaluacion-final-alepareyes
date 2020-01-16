@@ -13,9 +13,14 @@ class App extends React.Component {
     super();
     this.state = {
       search: "",
-      characters: []
+      characters: [],
+      searchSpecies: "",
+      searchGender: "",
+      searchEpisodes: ""
     };
     this.handleSearch = this.handleSearch.bind(this);
+    this.handleGender = this.handleGender.bind(this);
+    this.handleSpecies = this.handleSpecies.bind(this);
     this.renderCharacterDetails = this.renderCharacterDetails.bind(this);
   }
 
@@ -32,14 +37,39 @@ class App extends React.Component {
     })
   }
 
-  stop
+  handleSpecies(dataSpecies) {
+    this.setState({
+      searchSpecies: dataSpecies.searchSpecies
+    })
+  }
+
+
+  handleGender(dataGender) {
+    this.setState({
+      searchGender: dataGender.searchGender
+    })
+  }
 
   // HELPERS
 
   filteredCharacters() {
     return this.state.characters
-      .filter(character => character.name.toLowerCase().includes(this.state.search.toLowerCase()));
+      .filter(character => {
+        return (character.name.toLowerCase().includes(this.state.search.toLowerCase())
+          || character.species.toLowerCase().includes(this.state.search.toLowerCase())
+          || character.origin.name.toLowerCase().includes(this.state.search.toLowerCase()));
+      })
+      .filter(character => parseInt(character.species.toLowerCase().includes(this.state.searchSpecies.toLowerCase())))
+      .filter(character => (character.gender.toLowerCase().includes(this.state.searchGender.toLowerCase())))
+
   }
+
+
+  // .filter(character => (character.name.toLowerCase().includes(this.state.search.toLowerCase()));
+
+
+
+
 
 
   // RENDER
@@ -61,16 +91,26 @@ class App extends React.Component {
 
 
   render() {
-
+    console.log(this.state.searchSpecies)
     return (
 
-      < div className="App" >
+      <div className="App">
         <Header />
         <Switch>
           <Route exact path="/" >
-            <Filters handleSearch={this.handleSearch} value={this.state.search} />
-            <CharacterList characters={this.filteredCharacters()} />
+
+            <Filters
+              genderSearch={this.state.searchGender}
+              handleGender={this.handleGender}
+              specieSearch={this.state.searchSpecies}
+              handleSearch={this.handleSearch}
+              handleSpecies={this.handleSpecies}
+              value={this.state.search} />
+
+            <CharacterList
+              characters={this.filteredCharacters()} />
           </Route>
+
           <Route exact path="/character/:id">
             {this.renderCharacterDetails}
           </Route>
